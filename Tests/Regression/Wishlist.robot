@@ -48,9 +48,3 @@ Resource          ../../Settings/Browser_Settings.txt
     Click Element    ${removeWishlist}
     Sleep    2
     Alert Should Be Present    Are you sure you want to remove from wishlist ?
-
-4_wishlist_nonRegisteredUser
-    Search Tour
-    Add To Wishlist Tour
-    Alert Should Be Present    Please Login to add to wishlist.
-    Sleep    3
