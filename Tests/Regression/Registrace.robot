@@ -39,9 +39,7 @@ Resource          ../../Settings/Browser_Settings.txt
     Title Should Be    Register
 
 3_reg_passwords
-    Wait Until Element Is Visible    ${myAcc}
-    Click Element    ${myAcc}
-    Click Link    ${signup}
+    Go To    ${goToSignUp}
     Input Text    ${email}    wdawdaw@gmail.com
     Input Password    ${password}    ${usePswd}
     Input Password    ${passwordAgain}    ${usePswd2}
