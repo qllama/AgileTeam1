@@ -25,15 +25,37 @@ Login
     Click Element    ${home}
 
 Fill Search For Flight FlightsPage
-    [Arguments]    ${flightOrigin}    ${flightDestination}
-    Click Element    ${originFlightField}
-    Input Text    ${activeSetFlightField}    ${flightOrigin}
-    Wait Until Element Is Visible    ${firstResultFlightField}
-    Click Element    ${firstResultFlightField}
-    Click Element    ${destinationFlightField}
-    Input Text    ${activeSetFlightField}    ${flightDestination}
-    Wait Until Element Is Visible    ${firstResultFlightField}
-    Click Element    ${firstResultFlightField}
+    [Arguments]    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
+    Click Element    ${originFlightFieldFL}
+    Input Text    ${activeSetFlightFieldFL}    ${flightOrigin}
+    Wait Until Element Is Visible    ${firstResultFlightFieldFL}
+    Click Element    ${firstResultFlightFieldFL}
+    Click Element    ${destinationFlightFieldFL}
+    Input Text    ${activeSetFlightFieldFL}    ${flightDestination}
+    Wait Until Element Is Visible    ${firstResultFlightFieldFL}
+    Click Element    ${firstResultFlightFieldFL}
+    Click Element    ${timeDepartFlightFieldFL}
+    Input Text    ${activeTimeDepartFlightFieldFL}    ${flightTimeDepart}
+
+Check Search For Flight Results FlightsPage
+    Wait Until Page Contains    ${flightOriginFullName}    100
+    Wait Until Page Contains    ${flightDestinationFullName}
+    Wait Until Page Contains    ${flightTimeDepart}
+    Wait Until Page Contains Element    ${bookFlightNowButtonFL}    100
+    Click Button    ${moreDetailsButtonFL}
+    Wait Until Page Contains    ${flightDescription}
+    Wait Until Page Contains    ${flightTimeDepartFullName}
+
+Finish Flight Rezervation FlightsPage
+    Wait Until Page Contains    Booking Summary    100
+    Page Should Contain    Travellers Info
+    Page Should Contain    Payment Information
+    Page Should Contain Button    ${confirmBookingButton}
+    Click Element    ${confirmBookingButton}
+    Title Should Be    Flights List
+    Input Text    ${enterEmailTextField}    ${demoLogin}
+    Click Element    ${confirmBookingButton}
+    Wait Until Page Contains    Your Booking is Confirmed    100
 
 StartTourSearch
     Click Element    ${tourButton}

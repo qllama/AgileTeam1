@@ -9,6 +9,7 @@ ${locationTour}    xpath=//*[@id="s2id_autogen10"]/a/span[2]
 ${inputField}     xpath=//*[@id="select2-drop"]/div/input
 ${resultField}    xpath=//*[@id="select2-drop"]/ul/li/ul/li/div
 ${searchTour}     xpath=//*[@id="TOURS"]/form/div[2]/div[3]/button
+${searchFlightTab}    xpath=//*[@id="body-section"]/div[2]/div[2]/div/ul/li[2]/a
 ${home}           xpath=/html/body/nav[1]/div/div/div/ul/li[1]/a
 ${accountButton}    xpath=/html/body/div[3]/div/div/div[2]/ul/ul/li[1]/ul/li[1]/
 ${locationHotel}    xpath=//*[@id="s2id_autogen8"]/a/span[1]
@@ -22,3 +23,8 @@ ${searchCar}      xpath=//*[@id="CARS"]/form/div[2]/div[5]/button
 ${resultCar}      xpath=//*[@id="select2-drop"]/ul/li/div
 ${myAcc}          xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/a)[1]
 ${signup}         xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[2]
+${searchFlightButton}    xpath=//*[@id="flight"]/form/div[3]/div[4]/button
+${originFlightField}    xpath=//*[@id="s2id_autogen12"]
+${destinationFlightField}    xpath=//*[@id="s2id_autogen14"]
+${activeSetFlightField}    xpath=//*[@id="select2-drop"]/div/input
+${timeDepartFlightField}    xpath=//*[@id="select2-drop"]/ul/li[1]/div

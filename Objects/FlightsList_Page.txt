@@ -1,16 +1,24 @@
 *** Variables ***
 ${flightOrigin}    PRG
+${flightOriginFullName}    Prague, Czech Republic
 ${flightDestination}    MUC
+${flightDestinationFullName}    Munich, Germany
+${flightTimeDepart}    2017-12-29
+${flightTimeDepartFullName}    29 December, 2017 - 29 December, 2017
+${flightDescription}    PRG - MUC
 ${loginAsUserGuestButton}    id=userGuest
 ${loginAsKnownUser}    //*[@id="myModal"]/div/div/div[2]/div[1]/form/div[2]/button
 ${confirmBookingButton}    id=confirmBooking
 ${enterEmailTextField}    id=email
 ${enterKnownEmailField}    //*[@id="email"]
 ${enterPasswordField}    //*[@id="pwd"]
-${modifySearchButton}    xpath=//span[text()="Modify"]
-${originFlightField}    xpath=//*[@id="s2id_autogen1"]
-${activeSetFlightField}    xpath=//*[@id="select2-drop"]/div/input
-${firstResultFlightField}    xpath=//*[@id="select2-drop"]/ul/li/div
-${destinationFlightField}    xpath=//*[@id="s2id_autogen3"]
-${searchFlightButton}    xpath=//*[@id="modify"]/div[1]/div/form/div[3]/div[4]/button
-${bookFlightNowButtonFL}    //*[@id="body-section"]/div[5]/table/tbody/tr[1]/td/div/div[2]/div/button
+${modifySearchButtonFL}    xpath=//span[text()="Modify"]
+${originFlightFieldFL}    xpath=//*[@id="s2id_autogen1"]
+${activeSetFlightFieldFL}    xpath=//*[@id="select2-drop"]/div/input
+${firstResultFlightFieldFL}    xpath=//*[@id="select2-drop"]/ul/li/div
+${destinationFlightFieldFL}    xpath=//*[@id="s2id_autogen3"]
+${searchFlightButtonFL}    xpath=//*[@id="modify"]/div[1]/div/form/div[3]/div[4]/button
+${bookFlightNowButtonFL}    xpath=//*[@id="body-section"]/div[5]/table/tbody/tr[1]/td/div/div[2]/div/button
+${moreDetailsButtonFL}    xpath=//*[@id="body-section"]/div[5]/table/tbody/tr[1]/td/div/div[1]/div[2]/div/div[1]/button
+${timeDepartFlightFieldFL}    xpath=//*[@id="modify"]/div[1]/div/form/div[3]/div[1]
+${activeTimeDepartFlightFieldFL}    xpath=//*[@id="modify"]/div[1]/div/form/div[3]/div[1]/input
