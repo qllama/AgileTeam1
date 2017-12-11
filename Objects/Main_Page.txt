@@ -28,3 +28,6 @@ ${originFlightField}    xpath=//*[@id="s2id_autogen12"]
 ${destinationFlightField}    xpath=//*[@id="s2id_autogen14"]
 ${activeSetFlightField}    xpath=//*[@id="select2-drop"]/div/input
 ${timeDepartFlightField}    xpath=//*[@id="select2-drop"]/ul/li[1]/div
+${firstResultFlightField}    xpath=//*[@id="select2-drop"]/ul/li/div
+${activeSetFlightTimeDepartField}    xpath=//*[@id="flight"]/form/div[3]/div[1]/input
+${setFlightTimeDepartField}    xpath=//*[@id="flight"]/form/div[3]/div[1]

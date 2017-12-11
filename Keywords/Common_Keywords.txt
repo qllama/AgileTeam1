@@ -37,6 +37,21 @@ Fill Search For Flight FlightsPage
     Click Element    ${timeDepartFlightFieldFL}
     Input Text    ${activeTimeDepartFlightFieldFL}    ${flightTimeDepart}
 
+Fill Search For Flight MainPage
+    [Arguments]    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
+    Wait Until Element Is Visible    ${originFlightField}    100
+    Click Element    ${originFlightField}
+    Input Text    ${activeSetFlightField}    ${flightOrigin}
+    Wait Until Element Is Visible    ${firstResultFlightField}    100
+    Click Element    ${firstResultFlightField}
+    Click Element    ${destinationFlightField}
+    Input Text    ${activeSetFlightField}    ${flightDestination}
+    Wait Until Element Is Visible    ${timeDepartFlightField}    100
+    Click Element    ${timeDepartFlightField}
+    Wait Until Element Is Visible    ${setFlightTimeDepartField}
+    Click Element    ${setFlightTimeDepartField}
+    Input Text    ${activeSetFlightTimeDepartField}    ${flightTimeDepart}
+
 Check Search For Flight Results FlightsPage
     Wait Until Page Contains    ${flightOriginFullName}    100
     Wait Until Page Contains    ${flightDestinationFullName}

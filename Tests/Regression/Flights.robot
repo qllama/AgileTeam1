@@ -1,6 +1,7 @@
 *** Settings ***
 Test Setup        Prepare Browser    ${url}    ${browser}
-Library           Selenium2Library    #Test Teardown    Close Browser
+Test Teardown     Close Browser
+Library           Selenium2Library
 Resource          ../../Keywords/Common_Keywords.txt
 Resource          ../../Objects/Main_Page.txt
 Resource          ../../Objects/FlightsList_Page.txt
@@ -36,17 +37,6 @@ Resource          ../../Settings/Browser_Settings.txt
 
 4_flight_search
     Click Element    ${searchFlightTab}
-    Wait Until Element Is Visible    ${originFlightField}    100
-    Click Element    ${originFlightField}
-    Input Text    ${activeSetFlightField}    ${flightOrigin}
-    Wait Until Element Is Visible    //*[@id="select2-drop"]/ul/li/div    100
-    Click Element    //*[@id="select2-drop"]/ul/li/div
-    Click Element    ${destinationFlightField}
-    Input Text    ${activeSetFlightField}    ${flightDestination}
-    Wait Until Element Is Visible    ${timeDepartFlightField}    100
-    Click Element    ${timeDepartFlightField}
-    Wait Until Element Is Visible    //*[@id="flight"]/form/div[3]/div[1]
-    Click Element    //*[@id="flight"]/form/div[3]/div[1]
-    Input Text    //*[@id="flight"]/form/div[3]/div[1]/input    ${flightTimeDepart}
+    Fill Search For Flight MainPage    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
     Click Element    ${searchFlightButton}
     Check Search For Flight Results FlightsPage
