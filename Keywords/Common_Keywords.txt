@@ -145,3 +145,68 @@ Reservation Hotel On The Menu Page For Register User
     Wait Until Element Is Visible    ${payOnArrival}
     Click Button    ${payOnArrival}
     Confirm Action
+
+Search Cars Menu
+    [Arguments]    ${pickUp}    ${dropOff}
+    Click Element    ${carButton}
+    Click Element    ${modify}
+    Wait Until Element Is Visible    ${searchButton}
+    Click Element    ${carLoc2}
+    Input Text    ${input}    ${dropOff}
+    Wait Until Element Is Visible    ${firstResult}
+    Click Element    ${firstResult}
+    Click Element    ${carLoc1}
+    Input Text    ${input}    ${pickUp}
+    Wait Until Element Is Visible    ${firstResult}
+    Click Element    ${firstResult}
+    Click Button    ${searchButton}
+
+Search Cars
+    [Arguments]    ${pickUp}    ${dropOff}
+    Click Element    ${selectCar}
+    Wait Until Element Is Visible    ${locationCar1}
+    Click Element    ${locationCar1}
+    Input Text    ${inputField}    ${pickUp}
+    Wait Until Element Is Visible    ${resultCar}
+    Click Element    ${resultCar}
+    Sleep    2
+    Click Element    ${locationCar2}
+    Input Text    ${inputField}    ${dropOff}
+    Wait Until Element Is Visible    ${resultCar}
+    Click Element    ${resultCar}
+    Click Element    ${searchCar}
+
+Book Car as Guest
+    Click Button    ${detailsButton}
+    Page Should Contain    ${valid}
+    Execute JavaScript    (window.scrollBy(250,350))
+    Wait Until Element Is Visible    ${bookButton}
+    Click Button    ${bookButton}
+    Input Text    ${firstName}    ${name}
+    Input Text    ${lastName}    ${name2}
+    Input Text    ${email}    ${em}
+    Input Text    ${confirmEmail}    ${em}
+    Input Text    ${contactNumber}    ${tel}
+    Input Text    ${address}    ${userAddress}
+    Click Element    ${selectCountry}
+    Wait Until Element Is Visible    ${firstResult}
+    Click Element    ${firstResult}
+    Click Button    ${confirmButton}
+    Wait Until Element Is Visible    ${payButton}
+    Click Button    ${payButton}
+    Confirm Action
+
+Book Car as User
+    Click Button    ${detailsButton}
+    Page Should Contain    ${valid}
+    Execute JavaScript    (window.scrollBy(250,350))
+    Wait Until Element Is Visible    ${bookButton}
+    Click Button    ${bookButton}
+    Click Element    ${signInTab}
+    Wait Until Element Is Visible    //*[@id="username"]
+    Input Text    ${emailInput}    ${demoEmail}
+    Input Password    ${passwordInput}    ${demoPassword}
+    Click Button    ${confirmButton}
+    Wait Until Element Is Visible    ${payButton}
+    Click Button    ${payButton}
+    Confirm Action

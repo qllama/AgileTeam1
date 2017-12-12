@@ -1,0 +1,49 @@
+*** Variables ***
+${carButton}      xpath=/html/body/nav[1]/div/div/div/ul/li[5]/a
+${detailsButton}    xpath=//*[@id="body-section"]/div[7]/div[2]/div/table/tbody/tr[1]/td/div[2]/div/div[5]/a/button
+${carButtonHome}    xpath=//*[@id="body-section"]/div[2]/div[2]/div/ul/li[4]/a
+${searchForm}     xpath=//*[@id="CARS"]/form/div[2]/div[3]
+${modify}         xpath=//*[@id="body-section"]/div[3]/div/div/div[6]/div/a
+${searchButton}    xpath=//*[@id="modify"]/div[1]/div/form/div[2]/div[5]/button
+${pickUpInput}    xpath=//*[@id="s2id_autogen1"]
+${dropOffInput}    xpath=//*[@id="s2id_autogen2"]
+${bookButton}     xpath= /html/body/div[6]/div/div[2]/form/button
+#bigForm
+${firstName}      xpath=//*[@id="guestform"]/div[1]/div/input
+${lastName}       xpath=//*[@id="guestform"]/div[2]/div/input
+${email}          xpath=//*[@id="guestform"]/div[3]/div/input
+${confirmEmail}    xpath=//*[@id="guestform"]/div[4]/div/input
+${contactNumber}    xpath=//*[@id="guestform"]/div[6]/div/input
+${address}        xpath=//*[@id="guestform"]/div[7]/div/input
+${selectCountry}    //*[@id="s2id_autogen1"]/a/span[1]
+${confirmButton}    xpath=//*[@id="body-section"]/div[2]/div/div/div[1]/div[2]/div[2]/div[4]/button
+${payButton}      xpath=//*[@id="body-section"]/div[1]/div/div[3]/center/button
+${guestTab}       xpath=//*[@id="guesttab"]
+${signInTab}      xpath=//*[@id="signintab"]
+#userData
+${name}           Chester
+${name2}          Tester
+${userAddress}    Green Street 420 London
+${em}             tester69@gmail.com
+${tel}            123456789
+${country}        Czech Republic
+#formData
+${pickUpLocation}    Manchester
+${dropOffLocationValid}    Manchester
+${dropOffLocationInvalid}    Phayom Phra
+${pickUpDate}     27/12/2017
+${dropOffDate}    28/12/2017
+${pickUpTimeOption}    21
+${dropOffTimeOption}    42
+#demo
+${emailInput}     xpath=//*[@id="username"]
+${demoEmail}      user@phptravels.com
+${passwordInput}    xpath=//*[@id="password"]
+${demoPassword}    demouser
+#validators
+${valid}          Description
+${invalid}        No Results!!
+${input}          xpath=//*[@id="select2-drop"]/div/input
+${firstResult}    xpath=//*[@id="select2-drop"]/ul
+${carLoc1}        xpath=//*[@id="s2id_carlocations"]/a/span[1]
+${carLoc2}        xpath=//*[@id="s2id_carlocations2"]/a/span[1]
