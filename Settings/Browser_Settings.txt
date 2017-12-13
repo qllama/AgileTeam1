@@ -2,3 +2,5 @@
 ${url}            http://www.phptravels.net/
 ${browser}        chrome
 ${screen}	250,950
+${screenToursA}	480,880
+${screenToursB}	480,1150

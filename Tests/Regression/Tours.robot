@@ -30,13 +30,13 @@ Resource          ../../Settings/Browser_Settings.txt
     Input Text    ${email}    ${em}
     Click Element    ${confirmEmail}
     Input Text    ${confirmEmail}    ${em}
-    Execute Javascript    window.scrollTo(480,880)
+    Execute Javascript    window.scrollTo(${screenToursA})
     Wait Until Element Is Visible    ${contactNumber}
     Click Element    ${contactNumber}
     Input Text    ${contactNumber}    ${tel}
     Click Element    ${address}
     Input Text    ${address}    ${userAddress}
-    Execute Javascript    window.scrollTo(480,1150)
+    Execute Javascript    window.scrollTo(${screenToursB})
     Click Element    ${selectCountry}
     Click Element    ${czechRepublic}
     FinishTourBooking
@@ -45,11 +45,11 @@ Resource          ../../Settings/Browser_Settings.txt
     StartTourSearch
     BookTour
     Click Element    ${signInTab}
-    Execute Javascript    window.scrollTo(480,750)
+    Execute Javascript    window.scrollTo(${screenToursA})
     Wait Until Element Is Visible    ${demoEmailField}
     Click Element    ${demoEmailField}
     Input Text    ${demoEmailField}    ${demoEmail}
     Click Element    ${passwordField}
     Input Password    ${passwordField}    ${demoPassword}
-    Execute Javascript    window.scrollTo(480,1147)
+    Execute Javascript    window.scrollTo(${screenToursB})
     FinishTourBooking
