@@ -115,7 +115,7 @@ Search Hotel On The Homepage List Page
     Click Button    ${buttonDetail}
 
 Reservation Hotel On The Menu Page For Nonregister User
-    Execute JavaScript    (window.scrollBy(250,950))
+    Execute JavaScript    (window.scrollBy(${screen}))
     Wait Until Element Is Visible    ${buttonBook}
     Click Button    ${buttonBook}
     Input Text    ${firstName}    ${fName}
@@ -134,7 +134,7 @@ Reservation Hotel On The Menu Page For Nonregister User
     Confirm Action
 
 Reservation Hotel On The Menu Page For Register User
-    Execute JavaScript    (window.scrollBy(250,950))
+    Execute JavaScript    (window.scrollBy(${screen}))
     Wait Until Element Is Visible    ${buttonBook}
     Click Button    ${buttonBook}
     Click Element    ${signIn}

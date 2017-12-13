@@ -1,3 +1,4 @@
 *** Variables ***
 ${url}            http://www.phptravels.net/
 ${browser}        chrome
+${screen}	250,950
