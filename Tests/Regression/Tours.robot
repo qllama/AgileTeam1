@@ -6,7 +6,7 @@ Library           Selenium2Library
 Resource          ../../Keywords/Common_Keywords.txt
 Resource          ../../Objects/Main_Page.txt
 Resource          ../../Objects/FlightsList_Page.txt
-Resource          ../../Objects/Tours.txt
+Resource          ../../Objects/Tours_Page.txt
 Resource          ../../Settings/Browser_Settings.txt
 
 *** Test Cases ***

@@ -15,10 +15,16 @@ Open My Account
     Go To    http://www.phptravels.net/account
     Title Should Be    My Account
 
+Open Wishlist
+    Go To    http://www.phptravels.net/account
+    Title Should Be    My Account
+    Click Element    ${wishlist}
+
 Login
     Go To    http://www.phptravels.net/login
     Input Text    ${enterEmail}    ${demoLogin}
     Input Password    ${enterPassword}    ${demoPassword}
+    Sleep    2
     Wait Until Element Is Visible    ${loginButton}
     Double Click Element    ${loginButton}
     Sleep    2
@@ -245,3 +251,53 @@ Book Car as User
     Wait Until Element Is Visible    ${payButton}
     Click Button    ${payButton}
     Confirm Action
+
+Search Tour
+    Click Element    ${selectTour}
+    Wait Until Element Is Visible    ${locationTour}
+    Click Element    ${locationTour}
+    Input Text    ${inputField}    Bangkok
+    Wait Until Element Is Visible    ${resultField}
+    Click Element    ${resultField}
+    Click Element    ${searchTour}
+
+Search Hotel
+    Wait Until Element Is Visible    ${locationHotel}
+    Click Element    ${locationHotel}
+    Input Text    ${inputField}    London
+    Wait Until Element Is Visible    ${resultField}
+    Click Element    ${resultField}
+    Click Element    ${searchHotel}
+
+Add To Wishlist
+    [Arguments]    ${wishlistButton}
+    Wait Until Element Is Visible    ${wishlistButton}
+    Element Text Should Be    ${wishlistButton}    +
+    Click Element    ${wishlistButton}
+    Sleep    3
+
+Remove From Wishlist
+    [Arguments]    ${wishlistButton}
+    Wait Until Element Is Visible    ${wishlistButton}
+    Element Text Should Be    ${wishlistButton}    -
+    Click Element    ${wishlistButton}
+    Sleep    3
+
+Wishlist Test
+    [Arguments]    ${wishlistButton}
+    Add To Wishlist    ${wishlistButton}
+    Remove From Wishlist    ${wishlistButton}
+    Add To Wishlist    ${wishlistButton}
+
+Remove From Wishlist Account
+    Wait Until Element Is Visible    ${removeWishlist}
+    Click Element    ${removeWishlist}
+    Sleep    2
+    Alert Should Be Present    ${alert}
+
+Wishlist Overview Test
+    [Arguments]    ${menuButton}    ${wishlistID}
+    Click Element    ${menuButton}
+    Add To Wishlist    ${wishlistID}
+    Remove From Wishlist    ${wishlistID}
+    Sleep    1

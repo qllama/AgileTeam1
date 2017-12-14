@@ -6,7 +6,7 @@ Library           Selenium2Library
 Resource          ../../Settings/Browser_Settings.txt
 Resource          ../../Keywords/Common_Keywords.txt
 Resource          ../../Objects/Main_Page.txt
-Resource          ../../Objects/Cars.txt
+Resource          ../../Objects/Cars_Page.txt
 
 *** Test Cases ***
 1_search_car_homepage_pass
