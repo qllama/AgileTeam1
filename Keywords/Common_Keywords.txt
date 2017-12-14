@@ -50,7 +50,7 @@ Check Registration Pass
 Check Registration Fail
     Title Should Be    Register
 
-Fill Search For Flight FlightsPage
+Search For Flight FlightsPage
     [Arguments]    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
     Click Element    ${originFlightFieldFL}
     Input Text    ${activeSetFlightFieldFL}    ${flightOrigin}
@@ -62,8 +62,9 @@ Fill Search For Flight FlightsPage
     Click Element    ${firstResultFlightFieldFL}
     Click Element    ${timeDepartFlightFieldFL}
     Input Text    ${activeTimeDepartFlightFieldFL}    ${flightTimeDepart}
+    Click Element    ${searchFlightButtonFL}
 
-Fill Search For Flight MainPage
+Search For Flight MainPage
     [Arguments]    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
     Wait Until Element Is Visible    ${originFlightField}    100
     Click Element    ${originFlightField}
@@ -77,6 +78,26 @@ Fill Search For Flight MainPage
     Wait Until Element Is Visible    ${setFlightTimeDepartField}
     Click Element    ${setFlightTimeDepartField}
     Input Text    ${activeSetFlightTimeDepartField}    ${flightTimeDepart}
+    Click Element    ${searchFlightButton}
+
+Go To Booking Options
+    Click Button    ${bookFlightNowButton}
+    Page Should Contain    Booking Options
+
+Login As Guest User FlightsPage
+    Wait Until Element Is Visible    ${loginAsUserGuestButton}
+    Click Element    ${loginAsUserGuestButton}
+
+Login As Known User FlightsPage
+    [Arguments]    ${demoLogin}    ${demoPassword}
+    Wait Until Element Is Visible    ${loginAsKnownUser}
+    Input Text    ${enterKnownEmailField}    ${demoLogin}
+    Input Text    ${enterPasswordField}    ${demoPassword}
+    Click Element    ${loginAsKnownUser}
+
+Modify Search FlightsPage
+    Click Element    ${modifySearchButtonFL}
+    Wait Until Page Contains    Search
 
 Check Search For Flight Results FlightsPage
     Wait Until Page Contains    ${flightOriginFullName}    100

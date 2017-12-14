@@ -20,7 +20,7 @@ Resource          ../../Settings/Browser_Settings.txt
     Input Text    ${firstname}    ${useFirstname}
     Input Text    ${lastname}    ${useLastname}
     Click Button    ${submitBtn}
-    Wait Until Page Contains    Hi, ${useFirstname}    100
+    Wait Until Page Contains    Hi, ${useFirstname}
     Check Registration Pass
 
 2_reg_fail
@@ -46,5 +46,5 @@ Resource          ../../Settings/Browser_Settings.txt
     Wait Until Page Contains    Password not matching with confirm password.
     Input Password    ${passwordAgain}    ${usePswd}
     Click Button    ${submitBtn}
-    Wait Until Page Contains    Hi, ${useFirstname}    100
+    Wait Until Page Contains    Hi, ${useFirstname}
     Check Registration Pass
