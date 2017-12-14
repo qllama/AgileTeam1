@@ -9,10 +9,8 @@ Resource          ../../Settings/Browser_Settings.txt
 
 *** Test Cases ***
 1_reg_pass
-    Wait Until Element Is Visible    ${myAcc}
-    Click Element    ${myAcc}
-    Click Link    ${signup}
-    Title Should Be    Register
+    Click My Account
+    Click Register
     Input Text    ${email}    ${useMail}
     Input Password    ${password}    ${usePswd}
     Input Password    ${passwordAgain}    ${usePswd}
@@ -22,13 +20,12 @@ Resource          ../../Settings/Browser_Settings.txt
     Input Text    ${firstname}    ${useFirstname}
     Input Text    ${lastname}    ${useLastname}
     Click Button    ${submitBtn}
-    Wait Until Page Contains    Hi, ${useFirstname}
-    Title Should Be    My Account
+    Wait Until Page Contains    Hi, ${useFirstname}    100
+    Check Registration Pass
 
 2_reg_fail
-    Wait Until Element Is Visible    ${myAcc}
-    Click Element    ${myAcc}
-    Click Link    ${signup}
+    Click My Account
+    Click Register
     Input Text    ${email}    ${demoLogin}
     Input Password    ${password}    ${usePswd}
     Input Password    ${passwordAgain}    ${usePswd}
@@ -36,7 +33,7 @@ Resource          ../../Settings/Browser_Settings.txt
     Input Text    ${lastname}    ${useLastname}
     Click Button    ${submitBtn}
     Wait Until Page Contains    Email Already Exists.
-    Title Should Be    Register
+    Check Registration Fail
 
 3_reg_passwords
     Go To    ${goToSignUp}
@@ -49,5 +46,5 @@ Resource          ../../Settings/Browser_Settings.txt
     Wait Until Page Contains    Password not matching with confirm password.
     Input Password    ${passwordAgain}    ${usePswd}
     Click Button    ${submitBtn}
-    Wait Until Page Contains    Hi, ${useFirstname}
-    Title Should Be    My Account
+    Wait Until Page Contains    Hi, ${useFirstname}    100
+    Check Registration Pass

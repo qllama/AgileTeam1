@@ -1,4 +1,10 @@
 *** Variables ***
-${enterEmail}     name=username
-${enterPassword}    name=password
-${loginButton}    xpath=(/html/body/div[4]/div[1]/div[1]/form/div[1]/div[5]/button)
+#${enterEmail}    name=username
+#${enterPassword}    name=password
+#${loginButton}    xpath=(/html/body/div[4]/div[1]/div[1]/form/div[1]/div[5]/button)
+${goToLogin}      http://www.phptravels.net/login
+${neheslo}        iddqd
+${username}       name=username
+${passwordLogin}    name=password
+${loginBtn}       //button[@class='btn btn-action btn-lg btn-block loginbtn']
+${logout}         xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[2]

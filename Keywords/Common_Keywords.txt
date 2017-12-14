@@ -24,6 +24,32 @@ Login
     Sleep    2
     Click Element    ${home}
 
+Click My Account
+    Wait Until Element Is Visible    ${myAcc}
+    Click Element    ${myAcc}
+
+Click Login
+    Click Link    ${login}
+    Title Should Be    Login
+
+Check Login
+    Wait Until Page Contains    Hi, Johny Smith
+    Title Should Be    My Account
+
+Click Logout
+    Click Link    ${logout}
+    Title Should Be    Login
+
+Click Register
+    Click Link    ${signup}
+    Title Should Be    Register
+
+Check Registration Pass
+    Title Should Be    My Account
+
+Check Registration Fail
+    Title Should Be    Register
+
 Fill Search For Flight FlightsPage
     [Arguments]    ${flightOrigin}    ${flightDestination}    ${flightTimeDepart}
     Click Element    ${originFlightFieldFL}

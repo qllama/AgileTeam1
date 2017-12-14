@@ -2,8 +2,8 @@
 ${demoLogin}      user@phptravels.com
 ${demoPassword}    demouser
 ${bookFlightNowButton}    xpath=//*[@id="body-section"]/div[5]/table/tbody/tr[1]/td/div/div[2]/div/button
-${myAccountButton}    xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/a)[1]
-${toLoginButton}    xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[1]
+#${myAccountButton}    xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/a)[1]
+#${toLoginButton}    xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[1]
 ${selectTour}     xpath=//*[@id="body-section"]/div[2]/div[2]/div/ul/li[3]/a
 ${locationTour}    xpath=//*[@id="s2id_autogen10"]/a/span[2]
 ${inputField}     xpath=//*[@id="select2-drop"]/div/input
@@ -38,3 +38,6 @@ ${alertNOK}       Please Login to add to wishlist.
 ${tourList}       xpath=/html/body/nav[1]/div/div/div/ul/li[4]/a
 ${hotelList}      xpath=/html/body/nav[1]/div/div/div/ul/li[2]/a
 ${carList}        xpath=/html/body/nav[1]/div/div/div/ul/li[5]/a
+${myAcc}          xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/a)[1]
+${signup}         xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[2]
+${login}          xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[1]
