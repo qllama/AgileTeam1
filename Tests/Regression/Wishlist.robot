@@ -12,7 +12,7 @@ Resource          ../../Settings/Browser_Settings.txt
 
 *** Test Cases ***
 1_wishlist_search_add_remove_tour
-    Login 2
+    Login
     Search Tour
     Wishlist Test    ${wishlistTourSearch}
     Open Wishlist
