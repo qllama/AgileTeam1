@@ -261,7 +261,7 @@ Search Cars
 Book Car as Guest
     Click Button    ${detailsButton}
     Page Should Contain    ${valid}
-    Execute JavaScript    (window.scrollBy(250,350))
+    Execute JavaScript    (window.scrollBy(${screen}))
     Wait Until Element Is Visible    ${bookButton}
     Click Button    ${bookButton}
     Input Text    ${firstName}    ${name}
@@ -281,11 +281,11 @@ Book Car as Guest
 Book Car as User
     Click Button    ${detailsButton}
     Page Should Contain    ${valid}
-    Execute JavaScript    (window.scrollBy(250,350))
+    Execute JavaScript    (window.scrollBy(${screen}))
     Wait Until Element Is Visible    ${bookButton}
     Click Button    ${bookButton}
     Click Element    ${signInTab}
-    Wait Until Element Is Visible    //*[@id="username"]
+    Wait Until Element Is Visible    ${emailInput}
     Input Text    ${emailInput}    ${demoEmail}
     Input Password    ${passwordInput}    ${demoPassword}
     Click Button    ${confirmButton}
