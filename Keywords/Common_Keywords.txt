@@ -15,6 +15,24 @@ Open My Account
     Go To    http://www.phptravels.net/account
     Title Should Be    My Account
 
+LoginCorrect
+    Wait Until Element Is Visible    ${myAcc}
+    Click Element    ${myAcc}
+    Click Link    ${login}
+    Title Should Be    Login
+    Input Text    ${username}    ${demoLogin}
+    Input Password    ${passwordLogin}    ${demoPassword}
+    Click Button    ${loginBtn}
+
+LoginFail
+    Go To    ${goToLogin}
+    Title Should Be    Login
+    Input Text    ${username}    ${demoLogin}
+    Input Password    ${passwordLogin}    ${neheslo}
+    Sleep    2
+    Click Button    ${loginBtn}
+    Wait Until Page Contains    Invalid Email or Password
+
 Login
     Go To    http://www.phptravels.net/login
     Input Text    ${enterEmail}    ${demoLogin}
@@ -28,17 +46,55 @@ Click My Account
     Wait Until Element Is Visible    ${myAcc}
     Click Element    ${myAcc}
 
-Click Login
-    Click Link    ${login}
-    Title Should Be    Login
-
 Check Login
+    Sleep    1
     Wait Until Page Contains    Hi, Johny Smith
     Title Should Be    My Account
 
-Click Logout
+Logout
+    Click My Account
     Click Link    ${logout}
     Title Should Be    Login
+
+Register Correct
+    Click My Account
+    Click Register
+    Title Should Be    Register
+    Input Text    ${email}    ${useMail}
+    Input Password    ${password}    ${usePswd}
+    Input Password    ${passwordAgain}    ${usePswd}
+    Click Button    ${submitBtn}
+    Wait Until Page Contains    The First name field is required.
+    Wait Until Page Contains    The Last Name field is required.
+    Input Text    ${firstname}    ${useFirstname}
+    Input Text    ${lastname}    ${useLastname}
+    Click Button    ${submitBtn}
+    Wait Until Page Contains    Hi, ${useFirstname}
+
+Register Incorrect
+    Click My Account
+    Click Register
+    Title Should Be    Register
+    Input Text    ${email}    ${demoLogin}
+    Input Password    ${password}    ${usePswd}
+    Input Password    ${passwordAgain}    ${usePswd}
+    Input Text    ${firstname}    ${useFirstname}
+    Input Text    ${lastname}    ${useLastname}
+    Click Button    ${submitBtn}
+    Wait Until Page Contains    Email Already Exists.
+
+Register Using Different Passwords
+    Go To    ${goToSignUp}
+    Input Text    ${email}    wdawdaw@gmail.com
+    Input Password    ${password}    ${usePswd}
+    Input Password    ${passwordAgain}    ${usePswd2}
+    Input Text    ${firstname}    ${useFirstname}
+    Input Text    ${lastname}    ${useLastname}
+    Click Button    ${submitBtn}
+    Wait Until Page Contains    Password not matching with confirm password.
+    Input Password    ${passwordAgain}    ${usePswd}
+    Click Button    ${submitBtn}
+    Wait Until Page Contains    Hi, ${useFirstname}
 
 Click Register
     Click Link    ${signup}

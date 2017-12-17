@@ -8,3 +8,4 @@ ${username}       name=username
 ${passwordLogin}    name=password
 ${loginBtn}       //button[@class='btn btn-action btn-lg btn-block loginbtn']
 ${logout}         xpath=(/html/body/div[3]/div/div/div[2]/ul/ul/li/ul/li/a)[2]
+${titleLogin}     Login
